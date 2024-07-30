@@ -1,0 +1,28 @@
+seed: 42
+batch_size: 1
+optimizer: Adam
+optimizer_args:
+    lr: 0.00015
+    amsgrad: True
+epochs: 200
+epoch_length: 2
+outputpath: experiments_avsepformer
+model: AV_8_Sepformer
+train_scp: data_list/voxceleb_5mix_train.csv
+val_scp: data_list/voxceleb_5mix_test.csv
+test_scp: data_list/voxceleb_5mix_test.csv
+mix_num: 5
+dataset_root_path: /home/pantianrui/data/VoxCeleb/
+#dataset_root_path: /home/wangbohan/new_new_ptrdata/
+loss: SI_SNR_PIT
+val_loss: SI_SNR
+pesq: PESQ
+n_saved: 1
+num_workers: 6
+validate_every: 1
+with_amp: False
+backend: nccl
+nproc_per_node: 4
+
+#test_cdp: /home/pantianrui/data/AV-Sepformer/experiments_avsepformer/AV_8_Sepformer_backend-nccl-2_20231218-091218/best_checkpoint_72_val_si_snr=14.7684.pt
+#resume_from: /home/pantianrui/data/AV-Sepformer-1/experiments_avsepformer/AV_8_Sepformer_backend-nccl-4_20240306-145940/best_checkpoint_15_val_si_snr=0.5590.pt

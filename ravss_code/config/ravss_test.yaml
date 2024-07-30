@@ -1,0 +1,29 @@
+seed: 42
+batch_size: 1
+optimizer: Adam
+optimizer_args:
+    lr: 0.00015
+    amsgrad: True
+epochs: 200
+epoch_length: 2
+outputpath: experiments_RAVSS
+model: AV_test_RAVSS
+train_scp: data_list/voxceleb_5mix_train.csv
+val_scp: data_list/voxceleb_5mix_test.csv
+test_scp: data_list/voxceleb_3mix_test.csv
+dataset_root_path: 
+noise_dataset_path: 
+loss: SI_SNR_PIT
+val_loss: SI_SNR
+mix_num: 3
+target_num: 4
+pesq: PESQ
+n_saved: 1
+num_workers: 6
+validate_every: 1
+with_amp: False
+backend: nccl
+nproc_per_node: 4
+
+test_cdp:
+resume_from: 

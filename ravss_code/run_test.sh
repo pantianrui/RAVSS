@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 python3 run_avsepformer_test_noise.py run config/avsepformer_test.yaml

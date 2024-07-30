@@ -1,0 +1,22 @@
+seed: 42
+batch_size: 1
+optimizer: Adam
+optimizer_args:
+    lr: 0.00015
+    amsgrad: True
+epochs: 200
+epoch_length: 2
+outputpath: experiments_avsepformer
+model: TDANet
+train_scp: data_list/voxceleb_2mix_train.csv
+val_scp: data_list/voxceleb_2mix_val.csv
+test_scp: data_list/voxceleb_2mix_test.csv
+dataset_root_path: /home/pantianrui/data/VoxCeleb/
+loss: SI_SNR
+pesq: PESQ
+n_saved: 1
+num_workers: 6
+validate_every: 1
+with_amp: False
+backend: nccl
+nproc_per_node: 2
